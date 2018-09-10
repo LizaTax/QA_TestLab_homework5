@@ -1,0 +1,61 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Products Management" verbose="1" >
+    <test name="Create New Order [Chrome]" >
+        <parameter name="selenium.browser" value="chrome" />
+        <classes>
+            <class name="myprojects.automation.assignment5.tests.PlaceOrderTest" >
+            <methods>
+                <include name="checkSiteVersion" />
+                <include name="createNewOrder" />
+            </methods>
+        </class>
+        </classes>
+    </test>
+    <test name="Create New Order [Firefox]" >
+        <parameter name="selenium.browser" value="firefox" />
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="myprojects.automation.assignment5.tests.PlaceOrderTest" >
+                <methods>
+                    <include name="checkSiteVersion" />
+                    <include name="createNewOrder" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create New Order [Remote]" >
+        <parameter name="selenium.browser" value="chrome-remote" />
+        <parameter name="selenium.grid" value="http://localhost:4444/wd/hub" />
+        <classes>
+            <class name="myprojects.automation.assignment5.tests.PlaceOrderTest" >
+            <methods>
+                <include name="checkSiteVersion" />
+                <include name="createNewOrder" />
+            </methods>
+        </class>
+        </classes>
+    </test>
+    <test name="Create New Order [EmulationSamsungGalaxyS6]" >
+        <parameter name="selenium.browser" value="mobileDevices" />
+        <classes>
+            <class name="myprojects.automation.assignment5.tests.PlaceOrderTest" >
+                <methods>
+                    <include name="checkSiteVersion" />
+                    <include name="createNewOrder" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create New Order [IE]" >
+        <parameter name="selenium.browser" value="ie" />
+        <classes>
+            <class name="myprojects.automation.assignment5.tests.PlaceOrderTest" >
+                <methods>
+                    <include name="checkSiteVersion" />
+                    <include name="createNewOrder" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
